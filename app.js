@@ -14,7 +14,13 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false)
 
+const mongoDB = 'mongodb://127.0.0.1/my_database'
 
+func().then(() => console.log('connected')).catch(err => console.log(err))
+
+async function func() {
+  await mongoose.connect(mongoDB);
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
