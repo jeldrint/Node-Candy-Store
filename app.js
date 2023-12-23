@@ -14,7 +14,7 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false)
 
-const mongoDB = 'mongodb://127.0.0.1/my_database'
+const mongoDB = 'mongodb+srv://johneldrintolentino:NMbn9JVFcaHlnob5@cluster0.qfa4rjl.mongodb.net/candies?retryWrites=true&w=majority'
 
 func().then(() => console.log('connected')).catch(err => console.log(err))
 
