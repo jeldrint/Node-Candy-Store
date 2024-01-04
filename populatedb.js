@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 
+// type in the command line: node populatedb <your mongodb url>
+
 console.log(
     'This script populates. Specified database as argument - e.g.: node populatedb "mongodb+srv://cooluser:coolpassword@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority"'
   );
