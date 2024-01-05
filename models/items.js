@@ -11,14 +11,14 @@ const ItemSchema = new Schema({
         type: String, maxLength: 200,
     },
     item_category: [{
-        type: Schema.Types.ObjectId, ref: 'Category'
+        type: Schema.Types.ObjectId, ref: 'Category', required: true,
     }],
-    item_price: [{
+    item_price: {
         type: Number, required: true
-    }],
-    item_number_in_stock: [{
+    },
+    item_number_in_stock: {
         type: Number, required: true
-    }]
+    }
 })
 
 module.exports = mongoose.model('Item', ItemSchema);
